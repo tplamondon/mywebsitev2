@@ -1,7 +1,20 @@
-import logo from './logo.svg';
+import React, { useState} from 'react';
 import './App.scss';
+import Intro from './components/intro';
 
 function App() {
+
+  const [article, setArticle] = useState(0);
+
+  function toggleIntro(e){
+    if(article == 1){
+      setArticle(0);
+    }
+    else{
+      setArticle(1);
+    }
+  }
+
   return (
     <div className="App">
       <div className='centreStuff'>
@@ -10,9 +23,11 @@ function App() {
           <p>Welcome to my website, please see below for more information</p>
         </div>
 
+        {article == 1 && <Intro />}
+
         <div className='gridLinks'>
           <div className='box'>
-            INTRO
+            <span onClick={toggleIntro}>INTRO</span>
           </div>
           <div className='box'>
             WORK
