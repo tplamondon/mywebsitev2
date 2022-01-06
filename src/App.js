@@ -1,10 +1,31 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my website</h1>
+      <div className='centreStuff'>
+        <div className='whiteBorder'>
+          <h1>Thomas Plamondon</h1>
+          <p>Welcome to my website, please see below for more information</p>
+        </div>
+
+        <div className='gridLinks'>
+          <div className='box'>
+            INTRO
+          </div>
+          <div className='box'>
+            WORK
+          </div>
+          <div className='box'>
+            ABOUT
+          </div>
+          <div className='box'>
+            CONTACT
+          </div>
+        </div>
+      </div>
+      
 
       {/* 
       <header className="App-header">
