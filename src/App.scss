@@ -1,3 +1,10 @@
+.blurImage{
+
+  &:before {
+    filter: blur(3px);
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -6,7 +13,13 @@
   text-align: center;
   min-height: 100vh;
   min-width: 100vw;
+  background-size: cover;
   background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("assets/bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+
+  
 
 
   .centreStuff {
@@ -55,6 +68,10 @@
 
   .hidden {
     display: none;
+  }
+
+  .bgColourGrey{
+    background-color: rgba(66, 66, 66, 0.863);
   }
 
 }

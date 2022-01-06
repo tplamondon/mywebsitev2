@@ -9,19 +9,23 @@ function App() {
   function toggleIntro(e){
     if(article == 1){
       setArticle(0);
+	  document.getElementById("App").classList.remove("blurImage");
     }
     else{
       setArticle(1);
+	  document.getElementById("App").classList.add("blurImage");
     }
   }
 
   return (
     <div className="App">
       <div className='centreStuff'>
+		{article===0 &&
         <div className='whiteBorder'>
           <h1>Thomas Plamondon</h1>
           <p>Welcome to my website, please see below for more information</p>
         </div>
+}
 
         {article == 1 && <Intro />}
 
