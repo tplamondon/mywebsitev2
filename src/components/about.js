@@ -1,5 +1,5 @@
-import React from "react"
-import "../App.scss"
+import React from "react";
+import "../App.scss";
 
 export default function About(props) {
   return (
@@ -21,5 +21,5 @@ export default function About(props) {
 
       <div className="box"></div>
     </div>
-  )
+  );
 }

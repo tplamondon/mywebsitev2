@@ -1,5 +1,5 @@
-import React from "react"
-import "../App.scss"
+import React from "react";
+import "../App.scss";
 
 export default function Work(props) {
   return (
@@ -56,5 +56,5 @@ export default function Work(props) {
 
       <div className="box"></div>
     </div>
-  )
+  );
 }

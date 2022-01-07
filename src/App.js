@@ -1,14 +1,15 @@
-import React, { useRef, useState } from "react"
-import "./App.scss"
-import Intro from "./components/intro"
-import Work from "./components/work"
-import About from "./components/about"
-import Contact from "./components/contact"
+import React, { useRef, useState } from "react";
+import "./App.scss";
+import Intro from "./components/intro";
+import Work from "./components/work";
+import About from "./components/about";
+import Contact from "./components/contact";
 
 function App() {
-  const [article, setArticle] = useState(0)
+  const [article, setArticle] = useState(0);
 
-  const appContainor = useRef(null)
+  const appContainor = useRef(null);
+  const introButton = useRef(null);
 
   function toggleArticle(e, articleToShow) {
     //at this moment, I can't figure out how to blur the background
@@ -17,17 +18,17 @@ function App() {
 	}
 	*/
     if (articleToShow == 0) {
-      setArticle(0)
+      setArticle(0);
     }
     if (articleToShow === 1) {
-      setArticle(1)
+      setArticle(1);
       //appContainor.current.classList.add("blurImage");
     } else if (articleToShow === 2) {
-      setArticle(2)
+      setArticle(2);
     } else if (articleToShow === 3) {
-      setArticle(3)
+      setArticle(3);
     } else if (articleToShow === 4) {
-      setArticle(4)
+      setArticle(4);
     }
   }
 
@@ -67,7 +68,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
