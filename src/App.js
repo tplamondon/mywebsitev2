@@ -60,8 +60,8 @@ function App() {
             <span onClick={(event) => toggleArticle(event, 4)}>CONTACT</span>
           </div>
           {article != 0 && (
-            <div>
-              <span onClick={(event) => toggleArticle(event, 0)}>Home</span>
+            <div className="box boxTake2">
+              <span onClick={(event) => toggleArticle(event, 0)}>HOME</span>
             </div>
           )}
         </div>
