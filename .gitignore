@@ -24,4 +24,4 @@ yarn-error.log*
 
 #assets to be ignored
 src/files/*
-src/assets/*
+src/assets/overlay.png
