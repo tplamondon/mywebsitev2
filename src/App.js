@@ -1,6 +1,7 @@
 import React, { useRef, useState} from 'react';
 import './App.scss';
 import Intro from './components/intro';
+import Work from './components/work';
 
 function App() {
 
@@ -8,19 +9,23 @@ function App() {
 
   const appContainor = useRef(null);
 
-  function toggleIntro(e){
+  function toggleArticle(e, articleToShow){
 	//at this moment, I can't figure out how to blur the background
 	/*if(appContainor.current.classList.contains("blurImage")){
 		appContainor.current.classList.remove("blurImage");
 	}
 	*/
-    if(article == 1){
+    if(article == 100){
       setArticle(0);
     }
-    else{
+    if(articleToShow === 1){
       setArticle(1);
 	  //appContainor.current.classList.add("blurImage");
     }
+	else if(articleToShow === 2){
+		setArticle(2);
+		//appContainor.current.classList.add("blurImage");
+	}
   }
 
   return (
@@ -34,13 +39,14 @@ function App() {
 }
 
         {article == 1 && <Intro />}
+		{article == 2 && <Work />}
 
         <div className='gridLinks'>
           <div className='box'>
-            <span onClick={toggleIntro}>INTRO</span>
+            <span onClick={ (event)=>toggleArticle(event, 1) }>INTRO</span>
           </div>
           <div className='box'>
-            WORK
+            <span onClick={(event)=>toggleArticle(event, 2)}>WORK</span>
           </div>
           <div className='box'>
             ABOUT
