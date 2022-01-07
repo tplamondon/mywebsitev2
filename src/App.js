@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useRef, useState} from 'react';
 import './App.scss';
 import Intro from './components/intro';
 
@@ -6,19 +6,25 @@ function App() {
 
   const [article, setArticle] = useState(0);
 
+  const appContainor = useRef(null);
+
   function toggleIntro(e){
+	//at this moment, I can't figure out how to blur the background
+	/*if(appContainor.current.classList.contains("blurImage")){
+		appContainor.current.classList.remove("blurImage");
+	}
+	*/
     if(article == 1){
       setArticle(0);
-	  document.getElementById("App").classList.remove("blurImage");
     }
     else{
       setArticle(1);
-	  document.getElementById("App").classList.add("blurImage");
+	  //appContainor.current.classList.add("blurImage");
     }
   }
 
   return (
-    <div className="App">
+    <div id="appContainor" ref={appContainor} >
       <div className='centreStuff'>
 		{article===0 &&
         <div className='whiteBorder'>
@@ -44,25 +50,6 @@ function App() {
           </div>
         </div>
       </div>
-      
-
-      {/* 
-      <header className="App-header">
-        <h1>Welcome to my website</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      */}
     </div>
   );
 }

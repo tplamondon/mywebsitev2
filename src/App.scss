@@ -1,11 +1,7 @@
-.blurImage{
 
-  &:before {
-    filter: blur(3px);
-  }
-}
 
-.App {
+
+#appContainor {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,8 +14,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-
-  
+  z-index: 1;
 
 
   .centreStuff {
@@ -75,8 +70,6 @@
   }
 
 }
-
-
 
 
 
