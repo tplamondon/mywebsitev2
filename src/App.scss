@@ -1,17 +1,32 @@
+
+
+$small: 800px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("assets/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+
 #appContainor {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("assets/bg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  z-index: 1;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  
 
 
   .centreStuff {
@@ -24,18 +39,30 @@
 
     .whiteBorder {
       border: 1px solid white;
-      margin-bottom: 5vh;
+      margin-bottom: 5%;
       padding: 1rem;
     }
 
+
     .gridLinks3 {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 5vh;
+      grid-template-columns: 33% 34% 33%;
+      @media (max-width: $small){
+        grid-template-columns: 10% 80% 10%;
+      }
+      max-width: 100%;
+      margin-top: 5%;
 
       div.box {
         padding: 1rem;
         text-align: center;
+
+        article {
+          img{
+            max-width: 100%;
+          }
+        }
+
       }
     }
 
