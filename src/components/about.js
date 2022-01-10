@@ -9,7 +9,7 @@ export default function About(props) {
       <div className="box bgColourGrey">
         <article>
           <h2>About</h2>
-          <img src={require("../assets/pic01.jpg")} alt="Picture for article" />
+          <img src={require("../assets/pic03.jpg")} alt="Picture for article" />
           <div class="leftAlign">
             <p>
               This website was created using react. The repo for this website can be found <a href="https://github.com/tplamondon/mywebsitev2">here</a>
