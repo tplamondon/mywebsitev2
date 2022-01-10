@@ -1,10 +1,11 @@
 
 
-$small: 800px;
+$small: 600px;
 
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -46,18 +47,17 @@ body {
 
     .gridLinks3 {
       display: grid;
-      grid-template-columns: 33% 34% 33%;
+      grid-template-columns: 1fr 2fr 1fr;
       @media (max-width: $small){
-        grid-template-columns: 10% 80% 10%;
+        grid-template-columns: 1fr 8fr 1fr;
       }
-      max-width: 100%;
       margin-top: 5%;
 
       div.box {
         padding: 1rem;
         text-align: center;
-
         article {
+          min-width: 100%;
           img{
             max-width: 100%;
           }
