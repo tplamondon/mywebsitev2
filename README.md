@@ -78,3 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Example Firefox Android
 
 ![chrome android example](android-firefox.png)
+
+As seen in this issue [here](https://github.com/mozilla-mobile/fenix/issues/10598), the bug seems to be related to firefox itself it seems. Simply disabling dynamic toolbar will fix it
